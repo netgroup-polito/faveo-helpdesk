@@ -103,6 +103,7 @@ class SocialMediaController extends Controller
             'twitter',
             'linkedin',
             'bitbucket',
+            'keycloak',
         ];
     }
 }

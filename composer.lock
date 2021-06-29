@@ -2239,6 +2239,7 @@
                 "SSO",
                 "authorization",
                 "bitbucket",
+                "keycloak",
                 "identity",
                 "idp",
                 "oauth",
