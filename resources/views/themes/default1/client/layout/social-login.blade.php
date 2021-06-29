@@ -1,7 +1,7 @@
 <?php
 $social = new \App\Model\helpdesk\Settings\SocialMedia();
 ?>
-@if($social->checkActive('twitter') || $social->checkActive('facebook') || $social->checkActive('google') || $social->checkActive('linkedin') || $social->checkActive('bitbucket') || $social->checkActive('github'))
+@if($social->checkActive('twitter') || $social->checkActive('facebook') || $social->checkActive('google') || $social->checkActive('linkedin') || $social->checkActive('bitbucket') || $social->checkActive('keycloak') || $social->checkActive('github'))
 <center>{{Lang::get('lang.or')}}</center>
 @endif
 
@@ -28,6 +28,11 @@ $social = new \App\Model\helpdesk\Settings\SocialMedia();
 @if($social->checkActive('bitbucket'))
 <a class="btn btn-block btn-social btn-bitbucket" href="{{ route('social.login', ['bitbucket']) }}" style="background-color: blue;color: white;">
     <span class="fab fa-bitbucket"></span> Sign in with Bitbucket
+</a>
+@endif
+@if($social->checkActive('keycloak'))
+<a class="btn btn-block btn-social btn-keycloak" href="{{ route('social.login', ['keycloak']) }}" style="background-color: blue;color: white;">
+    <span class="fab fa-keycloak"></span> Sign in with Keycloak
 </a>
 @endif
 @if($social->checkActive('github'))
