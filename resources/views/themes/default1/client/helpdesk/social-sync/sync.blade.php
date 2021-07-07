@@ -30,11 +30,6 @@ $redirect = 'social-sync';
         <span class="fa fa-bitbucket"></span> Sign in with Bitbucket
     </a>
     @endif
-    @if($social->checkActive('keycloak'))
-    <a class="btn btn-block btn-social btn-keycloak" href="{{ route('social.login', ['keycloak',$redirect]) }}" style="background-color: blue;color: white;">
-        <span class="fa fa-keycloak"></span> Sign in with Keycloak
-    </a>
-    @endif
     @if($social->checkActive('github'))
     <a class="btn btn-block btn-social btn-github" href="{{ route('social.login', ['github',$redirect]) }}" style="background-color: black;color: white;">
         <span class="fa fa-github"></span> Sign in with Github

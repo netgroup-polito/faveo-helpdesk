@@ -12,7 +12,6 @@ use Laravel\Socialite\One\TwitterProvider;
 use Laravel\Socialite\Two\FacebookProvider;
 use Laravel\Socialite\Two\LinkedInProvider;
 use Laravel\Socialite\Two\BitbucketProvider;
-use Laravel\Socialite\Two\KeycloakProvider;
 use League\OAuth1\Client\Server\Twitter as TwitterServer;
 
 class SocialiteManager extends Manager implements Contracts\Factory
@@ -95,20 +94,6 @@ class SocialiteManager extends Manager implements Contracts\Factory
 
         return $this->buildProvider(
           BitbucketProvider::class, $config
-        );
-    }
-
-    /**
-     * Create an instance of the specified driver.
-     *
-     * @return \Laravel\Socialite\Two\AbstractProvider
-     */
-    protected function createKeycloakDriver()
-    {
-        $config = $this->app['config']['services.keycloak'];
-
-        return $this->buildProvider(
-          KeycloakProvider::class, $config
         );
     }
 

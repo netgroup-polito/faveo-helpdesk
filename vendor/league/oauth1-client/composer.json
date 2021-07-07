@@ -21,7 +21,10 @@
         "sso",
         "single sign on",
         "bitbucket",
+<<<<<<< HEAD
         "keycloak",
+=======
+>>>>>>> parent of 9e8b57433... add keycloak provider
         "trello",
         "tumblr",
         "twitter"

@@ -151,19 +151,6 @@ class="nav-link active"
                             <a href="{{url('social/media/bitbucket')}}" class="btn btn-primary">Settings</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Keycloak</td>
-                        <td>
-                            @if($social->checkActive('keycloak')===true)
-                            <span style="color: green">Active</span>
-                            @else 
-                            <span style="color: red">Inactive</span>
-                            @endif
-                        </td>
-                        <td>
-                            <a href="{{url('social/media/keycloak')}}" class="btn btn-primary">Settings</a>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
