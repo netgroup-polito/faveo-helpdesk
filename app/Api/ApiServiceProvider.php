@@ -13,7 +13,7 @@ class ApiServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \URL::forceScheme('https');
     }
 
     /**
