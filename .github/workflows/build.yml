@@ -45,7 +45,7 @@ jobs:
           fi
 
           # The suffix to append to the repository name if not triggered by a push for a release
-          [[ "${{ steps.get_version.outputs.VERSION }}" == "" ]] && \
+          [[ "${{ steps.version.outputs.version }}" == "" ]] && \
             echo "::set-output name=repo-suffix::-dev" || \
             echo "::set-output name=repo-suffix::"
 
