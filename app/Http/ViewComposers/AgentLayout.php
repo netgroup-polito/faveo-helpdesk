@@ -210,7 +210,7 @@ class AgentLayout
      */
     public function getEmailConfig()
     {
-        $emails = $this->emails->where('sending_status', '=', 1)->where('fetching_status', '=', 1)->count();
+        $emails = $this->emails->where('sending_status', '=', 1)->count();
         if ($emails >= 1) {
             return true;
         }
